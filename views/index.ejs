@@ -7,5 +7,10 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form action="/upload-image" method="POST" enctype="multipart/form-data"> 
+        <input type='file' name="avatar" accept="image/*" id="imgInp" required />  
+        <button class="button"><i class="fa fa-lock"></i> Upload Image</button>
+    </form>
+    <img src="https://lunadorii-dev.s3.amazonaws.com/avatars/1532965435861.jpg"/>
   </body>
 </html>
