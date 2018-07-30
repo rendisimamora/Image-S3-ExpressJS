@@ -29,8 +29,8 @@ Pada form jangan lupa untuk menambahkan
 
 Setelah selesai membuat html untuk form. 
 
-buat konfigurasi untuk busboy pada app.js. yang bertujuan untuk memanggil fungsi busboy. 
-agar dapat membaca req.files.avatar pada input file yang dikirimkan melalui form.
+buat konfigurasi untuk busboy pada app.js.
+Agar dapat membaca req.files.avatar pada input file yang dikirimkan melalui form.
 
 ```
 const busboyBodyParser = require('busboy-body-parser');
@@ -50,7 +50,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 > app.use(busboyBodyParser());
 
 
-Tambahkan fungsi berikut kedalam folder routes anda. 
+Tambahkan fungsi berikut kedalam folder routes > index.js.
 
 ```
 const AWS = require('aws-sdk')
@@ -62,7 +62,7 @@ const REGION = 'REGION'
 
 ```
 
-Lalu Tambahkan fungsi untuk mengirim gambar ke S# 
+Lalu Tambahkan fungsi untuk mengirim gambar ke S3 pada folder routes > index.js. 
 
 ```
 router.post('/upload-image', function(req, res, next){
@@ -107,5 +107,6 @@ Jika ingin mengambil url dari gambar yang sudah dikirmkan ke S3.
 Hanya perlu memanggil fungsi 
 
 > data.Location
+
 
 Selamat Mencoba 
