@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 const AWS = require('aws-sdk')
 
-const BUCKET_NAME = 'lunadorii-dev'
-const IAM_USER_KEY = 'AKIAIDZ3JEHIHGIIFKDA'
-const IAM_USER_SECRET = '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'
-const REGION = 'ap-southeast-1'
+const BUCKET_NAME = 'BUCKET_NAME'
+const IAM_USER_KEY = 'IAM_USER_KEY'
+const IAM_USER_SECRET = 'IAM_USER_SECRET'
+const REGION = 'REGION'
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -27,12 +27,8 @@ router.post('/upload-image', function(req, res, next){
         ACL: 'public-read'
       };
       s3bucket.upload(params, function (err, data) {
-       if (err) {
-        console.log('error in callback');
-        console.log(err);
-       }else{
-         console.log(data)
-       }
+       console.log(data)
+       console.log(data.Location)
       });
     })
 })
