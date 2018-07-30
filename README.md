@@ -80,12 +80,8 @@ router.post('/upload-image', function(req, res, next){
         ACL: 'public-read'
       };
       s3bucket.upload(params, function (err, data) {
-       if (err) {
-        console.log('error in callback');
-        console.log(err);
-       }else{
-         console.log(data.Location)
-       }
+       console.log(data)
+       console.log(data.Location)
       });
     })
 })
