@@ -103,6 +103,3 @@ Jika ingin mengambil url dari gambar yang sudah dikirmkan ke S3.
 Hanya perlu memanggil fungsi 
 
 > data.Location
-
-
-Selamat Mencoba 
